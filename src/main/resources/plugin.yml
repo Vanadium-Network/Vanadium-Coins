@@ -1,0 +1,7 @@
+name: VanadiumCoins
+version: 1.0
+author: ShortPing
+api-version: 1.17
+main: dev.vanadium.coins.VanadiumCoins
+commands:
+  coins:

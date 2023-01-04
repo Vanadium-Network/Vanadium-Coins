@@ -1,0 +1,53 @@
+= VanadiumCoins
+
+== Permissions
+----
+vanadium.coins.manage - Enables /coins <add/get/set/remove> <Player> <Coins>
+----
+
+== Installation
+=== Maven
+Repository
+[source, xml]
+----
+<repository>
+    <id>vanadium-release</id>
+    <url>http://maven.vanadium.dev/repository/vanadium-release/</url>
+</repository>
+----
+
+Dependency
+[source, xml]
+----
+<dependency>
+  <groupId>dev.vanadium</groupId>
+  <artifactId>VanadiumCoins</artifactId>
+  <version>1.0-RELEASE</version>
+</dependency>
+----
+
+=== Gradle
+Repository
+[source, kotlin]
+----
+repository {
+    maven {
+        url = "http://maven.vanadium.dev/repository/vanadium-release"
+    }
+}
+----
+
+Dependency
+[source, kotlin]
+----
+implementation("dev.vanadium:VanadiumCoins:1.0-RELEASE")
+----
+
+== Usage
+Get CoinPlayer object
+[source, java]
+----
+CoinPlayer coinPlayer = CoinPlayer.fromPlayer(player);
+----
+
+This object should be stored as metadata for the player, to reset the cache use coinsPlayer#resetCache();
